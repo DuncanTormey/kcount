@@ -1,4 +1,5 @@
-#!/home/dut/anaconda2/bin/python
+#!/usr/bin/env python
+
 from __future__ import print_function
 import gzip
 from collections import Counter, defaultdict
@@ -11,7 +12,7 @@ from time import time
 
 def timed(f):
     '''
-    This decorator was addapted from: 
+    This decorator was adapted from:
     http://www.artima.com/weblogs/viewpost.jsp?thread=240808
    
     It times the execution of whatever function it is applied too.    
@@ -32,7 +33,7 @@ def timed(f):
 def ret_reverse_compliment(seq):
     '''
     This function takes a string of DNA sequence
-    and retuns the reverse compliment of that sequence
+    and returns the reverse compliment of that sequence
 
     >>>ret_reverse_compliment('AAAAGGGG')
     'CCCCTTTT'
@@ -86,7 +87,7 @@ def count_kmers(paths, ksize):
 def collapse_strands(kcounter):
     '''
     This function takes a dictionary as input, where the keys are kmers
-    and the values are occurances. It iterates through the keys of the
+    and the values are occurrences. It iterates through the keys of the
     dictionary and checks if the reverse compliment of the keys are in the
     dictionary, if it is the counts are combined and the reverse compliment
     key is deleted.
